@@ -10,6 +10,6 @@ namespace PatientEntities1.Models
     {
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string CI { get; set; }
+        public int CI { get; set; }
     }
 }

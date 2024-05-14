@@ -18,6 +18,7 @@ namespace Practica3.Controllers
         [HttpPost]
         public IActionResult GeneratePatientCode([FromBody] PatientInfo patientInfo)
         {
+
             string code = _patientManager.GeneratePatientCode(patientInfo.Name, patientInfo.LastName, patientInfo.CI);
             return Ok(new { PatientCode = code });
         }
@@ -26,7 +27,7 @@ namespace Practica3.Controllers
         {
             public string Name { get; set; }
             public string LastName { get; set; }
-            public string CI { get; set; }
+            public int CI { get; set; }
         }
     }
 }

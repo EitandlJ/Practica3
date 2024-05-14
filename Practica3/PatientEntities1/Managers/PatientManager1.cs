@@ -8,7 +8,7 @@ namespace PatientEntities1.Managers
 {
     public class PatientManager1
     {
-        public string GeneratePatientCode(string name, string lastName, string ci)
+        public string GeneratePatientCode(string name, string lastName, int ci)
         {
             string initials = $"{name.Substring(0, 1)}{lastName.Substring(0, 1)}";
             return $"{initials.ToUpper()}-{ci}";
