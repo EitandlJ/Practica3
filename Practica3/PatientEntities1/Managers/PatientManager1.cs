@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PatientEntities1.Managers
 {
-    internal class PatientManager1
+    public class PatientManager1
     {
+        public string GeneratePatientCode(string name, string lastName, string ci)
+        {
+            string initials = $"{name.Substring(0, 1)}{lastName.Substring(0, 1)}";
+            return $"{initials.ToUpper()}-{ci}";
+        }
     }
 }
